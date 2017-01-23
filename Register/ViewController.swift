@@ -2,8 +2,9 @@
 //  ConfirmViewController.swift
 //  Register
 //
-//  Created by Mac on 2017/1/22.
+//  Created by Mac on 2017/1/11.
 //  Copyright © 2017年 Mac. All rights reserved.
+//
 //
 
 import UIKit
@@ -11,18 +12,12 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class ConfirmViewController: UIViewController {
-
+class ViewController: UIViewController {
     
     @IBOutlet weak var name_check: UILabel!
-    
     @IBOutlet weak var gender_check: UILabel!
-    
     @IBOutlet weak var email_check: UILabel!
-    
-    
     @IBOutlet weak var phone_check: UILabel!
-    
     var uid = ""
     
     override func viewDidLoad() {
@@ -37,51 +32,39 @@ class ConfirmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var changePersonalInfo: UIButton!
     
-    @IBAction func viewDetail(_ sender: Any) {
+    @IBAction func view_detail(_ sender: Any) {
         
         var ref: FIRDatabaseReference!
         
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
         ref.observe(.value, with: { (snapshot) in
-            let name = snapshot.value as! String
-            self.name_check.text = name
-            self.name_check.isHidden = false
+            let name = snapshot.value
+            self.name_check = name as! UILabel!
         })
         
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Gender")
         ref.observe(.value, with: { (snapshot) in
-            let gender = snapshot.value as! String
-            self.gender_check.text = gender
-            self.gender_check.isHidden = false
+            let gender = snapshot.value
+            self.gender_check = gender as! UILabel!
         })
         
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Email")
         ref.observe(.value, with: { (snapshot) in
-            let email = snapshot.value as! String
-            self.email_check.text = email
+            let email = snapshot.value
+            self.email_check = email as! UILabel!
             self.email_check.isHidden = false
         })
         
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Phone")
         ref.observe(.value, with: { (snapshot) in
-            let phone = snapshot.value as! String
-            self.phone_check.text = phone
-            self.phone_check.isHidden = false
+            let phone = snapshot.value
+            self.phone_check = phone as! UILabel!
         })
         
-        changePersonalInfo.isHidden = false
         
-
     }
-    
-    @IBAction func changePersonInfo(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "ChangeDataViewControllerID")as! ChangeDataViewController
-        self.present(nextVC,animated:true,completion:nil)
-    }
-    
-    
+       
+    @IBOutlet weak var SuccessOrNot: UILabel!
     
 }

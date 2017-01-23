@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043BEB5E1E3654EA00342B11 /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BEB5D1E3654EA00342B11 /* ChangeDataViewController.swift */; };
+		04CAAAFF1E34FE820069EF6F /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CAAAFE1E34FE820069EF6F /* ConfirmViewController.swift */; };
 		04EA483E1E26438500537E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA483D1E26438500537E98 /* AppDelegate.swift */; };
 		04EA48431E26438500537E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EA48411E26438500537E98 /* Main.storyboard */; };
 		04EA48451E26438500537E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EA48441E26438500537E98 /* Assets.xcassets */; };
 		04EA48481E26438500537E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EA48461E26438500537E98 /* LaunchScreen.storyboard */; };
 		04EA48501E2644F900537E98 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA484F1E2644F900537E98 /* LogInViewController.swift */; };
-		04EA48521E26450A00537E98 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA48511E26450A00537E98 /* ConfirmViewController.swift */; };
+		04EA48521E26450A00537E98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA48511E26450A00537E98 /* ViewController.swift */; };
 		04EA48541E26451900537E98 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA48531E26451900537E98 /* SignUpViewController.swift */; };
 		04EA48561E266C4E00537E98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04EA48551E266C4E00537E98 /* GoogleService-Info.plist */; };
 		F7F2B92724D46BA81FF04491 /* Pods_Register.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453258A2EC89C389C5B85E1D /* Pods_Register.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043BEB5D1E3654EA00342B11 /* ChangeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
+		04CAAAFE1E34FE820069EF6F /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		04EA483A1E26438500537E98 /* Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Register.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EA483D1E26438500537E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EA48421E26438500537E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,7 +30,7 @@
 		04EA48471E26438500537E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04EA48491E26438500537E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04EA484F1E2644F900537E98 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ../LogInViewController.swift; sourceTree = "<group>"; };
-		04EA48511E26450A00537E98 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		04EA48511E26450A00537E98 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04EA48531E26451900537E98 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		04EA48551E266C4E00537E98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		453258A2EC89C389C5B85E1D /* Pods_Register.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Register.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +74,9 @@
 				04EA483D1E26438500537E98 /* AppDelegate.swift */,
 				04EA484F1E2644F900537E98 /* LogInViewController.swift */,
 				04EA48531E26451900537E98 /* SignUpViewController.swift */,
-				04EA48511E26450A00537E98 /* ConfirmViewController.swift */,
+				04CAAAFE1E34FE820069EF6F /* ConfirmViewController.swift */,
+				043BEB5D1E3654EA00342B11 /* ChangeDataViewController.swift */,
+				04EA48511E26450A00537E98 /* ViewController.swift */,
 				04EA48411E26438500537E98 /* Main.storyboard */,
 				04EA48441E26438500537E98 /* Assets.xcassets */,
 				04EA48461E26438500537E98 /* LaunchScreen.storyboard */,
@@ -222,7 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EA48521E26450A00537E98 /* ConfirmViewController.swift in Sources */,
+				043BEB5E1E3654EA00342B11 /* ChangeDataViewController.swift in Sources */,
+				04CAAAFF1E34FE820069EF6F /* ConfirmViewController.swift in Sources */,
+				04EA48521E26450A00537E98 /* ViewController.swift in Sources */,
 				04EA48501E2644F900537E98 /* LogInViewController.swift in Sources */,
 				04EA48541E26451900537E98 /* SignUpViewController.swift in Sources */,
 				04EA483E1E26438500537E98 /* AppDelegate.swift in Sources */,
