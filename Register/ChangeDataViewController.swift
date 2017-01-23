@@ -25,6 +25,16 @@ class ChangeDataViewController: UIViewController {
         if let user = FIRAuth.auth()?.currentUser {
             uid = user.uid
         }
+        
+        var ref: FIRDatabaseReference!
+        
+        ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
+        ref.observe(.value, with: { (snapshot) in
+            let name = snapshot.value as! String
+            self.name.text = name
+        })
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,9 +44,11 @@ class ChangeDataViewController: UIViewController {
     
     
     @IBAction func save(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "ConfirmViewControllerID")as! ConfirmViewController
         self.present(nextVC,animated:true,completion:nil)
+        
     }
 
     

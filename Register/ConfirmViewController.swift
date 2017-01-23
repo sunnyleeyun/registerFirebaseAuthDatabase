@@ -77,9 +77,11 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func changePersonInfo(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "ChangeDataViewControllerID")as! ChangeDataViewController
         self.present(nextVC,animated:true,completion:nil)
+        
     }
     
     

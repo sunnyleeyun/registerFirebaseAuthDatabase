@@ -76,12 +76,12 @@
 				04EA48531E26451900537E98 /* SignUpViewController.swift */,
 				04CAAAFE1E34FE820069EF6F /* ConfirmViewController.swift */,
 				043BEB5D1E3654EA00342B11 /* ChangeDataViewController.swift */,
-				04EA48511E26450A00537E98 /* ViewController.swift */,
 				04EA48411E26438500537E98 /* Main.storyboard */,
 				04EA48441E26438500537E98 /* Assets.xcassets */,
 				04EA48461E26438500537E98 /* LaunchScreen.storyboard */,
 				04EA48551E266C4E00537E98 /* GoogleService-Info.plist */,
 				04EA48491E26438500537E98 /* Info.plist */,
+				04EA48511E26450A00537E98 /* ViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
