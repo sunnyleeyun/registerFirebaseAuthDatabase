@@ -24,6 +24,9 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var emailL: UILabel!
     @IBOutlet weak var phoneL: UILabel!
     
+    @IBOutlet weak var logOut: UIButton!
+    
+    
     var uid = ""
     
     override func viewDidLoad() {
@@ -78,6 +81,7 @@ class ConfirmViewController: UIViewController {
             self.phone_check.isHidden = false
         })
         
+        logOut.isHidden = false
         changePersonalInfo.isHidden = false
         
 
@@ -91,6 +95,19 @@ class ConfirmViewController: UIViewController {
         
     }
     
+    
+    @IBAction func logOut(_ sender: Any) {
+        
+        var ref = FIRDatabase.database().reference(withPath: "Online-Status/\(uid)")
+        ref.setValue("OFF")
+        try!FIRAuth.auth()?.signOut()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "LogInViewControllerID")as! LogInViewController
+        self.present(nextVC,animated:true,completion:nil)
+
+        
+    }
     
     
 }
