@@ -15,13 +15,14 @@ class ConfirmViewController: UIViewController {
 
     
     @IBOutlet weak var name_check: UILabel!
-    
     @IBOutlet weak var gender_check: UILabel!
-    
     @IBOutlet weak var email_check: UILabel!
-    
-    
     @IBOutlet weak var phone_check: UILabel!
+    
+    @IBOutlet weak var nameL: UILabel!
+    @IBOutlet weak var genderL: UILabel!
+    @IBOutlet weak var emailL: UILabel!
+    @IBOutlet weak var phoneL: UILabel!
     
     var uid = ""
     
@@ -42,6 +43,12 @@ class ConfirmViewController: UIViewController {
     @IBAction func viewDetail(_ sender: Any) {
         
         var ref: FIRDatabaseReference!
+        
+        nameL.isHidden = false
+        genderL.isHidden = false
+        emailL.isHidden = false
+        phoneL.isHidden = false
+        
         
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Name")
         ref.observe(.value, with: { (snapshot) in

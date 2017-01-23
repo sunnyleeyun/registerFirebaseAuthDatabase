@@ -34,6 +34,24 @@ class ChangeDataViewController: UIViewController {
             self.name.text = name
         })
         
+        ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Gender")
+        ref.observe(.value, with: { (snapshot) in
+            let gender = snapshot.value as! String
+            self.gender.text = gender
+        })
+        
+        ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Email")
+        ref.observe(.value, with: { (snapshot) in
+            let email = snapshot.value as! String
+            self.email.text = email
+        })
+        
+        ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Phone")
+        ref.observe(.value, with: { (snapshot) in
+            let phone = snapshot.value as! String
+            self.phone.text = phone
+        })
+        
 
     }
     
